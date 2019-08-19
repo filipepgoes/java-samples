@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>test</groupId>
-  <artifactId>simple-batch</artifactId>
+  <artifactId>jaas-test-jar</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>simple-batch</name>
+  <name>jaas-test-jar</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -21,22 +21,23 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-   	<!-- https://mvnrepository.com/artifact/javax/javaee-api -->
-	<dependency>
-	    <groupId>javax</groupId>
-	    <artifactId>javaee-api</artifactId>
-	    <version>8.0.1</version>
-	    <scope>provided</scope>
-	</dependency>
-   	
   </dependencies>
   <build>
-  	<finalName>simple-batch</finalName>
-  	<plugins>
-  	  <plugin>
-        <groupId>org.wildfly.plugins</groupId>
-        <artifactId>wildfly-maven-plugin</artifactId>
-        <version>2.0.1.Final</version>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.6.0</version>
+        <executions>
+		  <execution>
+		    <goals>
+		      <goal>java</goal>
+		    </goals>
+		  </execution>
+		</executions>
+        <configuration>
+          <mainClass>br.gov.previc.jaastest.acn.SampleAcn</mainClass>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -47,7 +48,6 @@
           <target>1.8</target>
         </configuration>
       </plugin>
-      
-  	</plugins>
+    </plugins>
   </build>
 </project>

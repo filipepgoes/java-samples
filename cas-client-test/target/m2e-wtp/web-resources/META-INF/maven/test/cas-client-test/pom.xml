@@ -1,19 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <groupId>test</groupId>
-  <artifactId>simple-batch</artifactId>
+  <artifactId>cas-client-test</artifactId>
+  <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
-
-  <name>simple-batch</name>
+  <name>cas-client-test</name>
   <url>http://maven.apache.org</url>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -21,18 +14,23 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-   	<!-- https://mvnrepository.com/artifact/javax/javaee-api -->
+    <!-- https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-jaxrs -->
+	<dependency>
+	    <groupId>org.jboss.resteasy</groupId>
+	    <artifactId>resteasy-jaxrs</artifactId>
+	    <version>3.8.1.Final</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/javax/javaee-api -->
 	<dependency>
 	    <groupId>javax</groupId>
 	    <artifactId>javaee-api</artifactId>
 	    <version>8.0.1</version>
 	    <scope>provided</scope>
 	</dependency>
-   	
   </dependencies>
   <build>
-  	<finalName>simple-batch</finalName>
-  	<plugins>
+    <finalName>cas-client-test</finalName>
+    <plugins>
   	  <plugin>
         <groupId>org.wildfly.plugins</groupId>
         <artifactId>wildfly-maven-plugin</artifactId>
@@ -46,8 +44,7 @@
           <source>1.8</source>
           <target>1.8</target>
         </configuration>
-      </plugin>
-      
+      </plugin> 
   	</plugins>
   </build>
 </project>
