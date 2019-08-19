@@ -1,0 +1,3 @@
+br\gov\previc\jaastest\servlet\AuthenticationServlet.class
+br\gov\previc\jaastest\jaas\JaasTestCallbackHandler.class
+br\gov\previc\jaastest\jaas\JaasTestLoginModule.class
