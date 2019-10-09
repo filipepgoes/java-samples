@@ -1,0 +1,7 @@
+br\gov\previc\simple\batch\model\PayrollInputRecord.class
+br\gov\previc\simple\batch\servlet\PayrollJobSubmitterServlet.class
+br\gov\previc\simple\batch\batch\SimpleItemReader.class
+br\gov\previc\simple\batch\batch\SimpleItemWriter.class
+br\gov\previc\simple\batch\model\SampleDataHolderBean.class
+br\gov\previc\simple\batch\batch\SimpleItemProcessor.class
+br\gov\previc\simple\batch\model\PayrollRecord.class

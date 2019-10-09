@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+
+<servlet>
+	<servlet-name>Faces Servlet</servlet-name>
+	<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+	<load-on-startup>1</load-on-startup>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Faces Servlet</servlet-name>
+	<url-pattern>/faces/*</url-pattern>
+</servlet-mapping>
+  
+<security-constraint>
+	<display-name>ProtectedConstraint</display-name>
+    <web-resource-collection>
+    	<web-resource-name>JSF Files</web-resource-name>
+        <description>The protected jsf files in the web application</description>
+        <url-pattern>/protected/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+        <description/>
+        <role-name>usuario</role-name>
+    </auth-constraint>
+    <user-data-constraint>
+        <description>Forces the use of https.</description> 
+        <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+    </user-data-constraint>
+</security-constraint>
+<login-config>
+    <auth-method>BASIC</auth-method>
+    <realm-name>ApplicationRealm</realm-name>
+</login-config>
+<security-role>
+    <description>This is a privileged role. Has access to everything in the web app.</description>
+    <role-name>usuario</role-name>
+</security-role>
+<welcome-file-list>
+	<welcome-file>index.xhtml</welcome-file>
+</welcome-file-list>
+</web-app>
