@@ -1,0 +1,5 @@
+br\gov\previc\cms\ProtectedByAnnotationWS.class
+br\gov\previc\cms\PublicWS.class
+br\gov\previc\cms\ApplicationWS.class
+br\gov\previc\cms\PartiallyProtectedWS.class
+br\gov\previc\cms\ProtectedBySecurityConstraintWS.class
