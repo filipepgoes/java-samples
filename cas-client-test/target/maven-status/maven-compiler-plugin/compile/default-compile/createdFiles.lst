@@ -1,0 +1,4 @@
+servlet\ProtectedServlet.class
+ws\ProtectedWebService.class
+ws\SecurityFilter.class
+ws\ProtectedApplication.class

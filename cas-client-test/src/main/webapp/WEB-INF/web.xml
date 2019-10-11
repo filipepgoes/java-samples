@@ -11,6 +11,10 @@
     <param-name>casServerUrlPrefix</param-name>
     <param-value>https://homologacao-cas.previc.gov:8443/cas</param-value>
   </init-param>
+  <init-param>
+    <param-name>serverName</param-name>
+    <param-value>http://localhost</param-value>
+  </init-param>
 </filter>
 <filter-mapping>
     <filter-name>CAS Authentication Filter</filter-name>
