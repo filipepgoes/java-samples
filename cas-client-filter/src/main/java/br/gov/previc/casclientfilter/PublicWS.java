@@ -7,7 +7,7 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 
-@Path("public")
+@Path("publicws")
 public class PublicWS {
 	@GET
     public Response test(@Context UriInfo uriInfo, 
