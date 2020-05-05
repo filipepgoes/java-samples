@@ -1,0 +1,9 @@
+<section *ngIf="person" class="panel">
+	<div class = "panel-body">
+		<h4><i [class]="person.gender==='female' ? 'ion-female' : (person.gender==='male' ? 'ion-male' : 'ion-transgender')"></i> {{person.name}}</h4>
+		<i class="ion-android-calendar"></i> {{person.birthyear}}
+		<br/><strong>Hair: </strong>{{person.haircolor}} <strong>Eyes: </strong>{{person.eyecolor}}
+		<br/><strong>Height: </strong>{{person.height}} <strong>Mass: </strong>{{person.mass}}
+		<br/><button type="button" class="btn" (click)="gotoEdit()">Edit</button>
+	</div>
+</section>

@@ -1,0 +1,9 @@
+<section *ngIf="people" class = "panel-body">
+	<table class = "table-striped table-bordered table-hover table-condensed">
+		<tr *ngFor="let person of people">
+			<td><a href="#" [routerLink]="['/person', person.id]">
+					{{person.name}} </a>&nbsp;&nbsp;</td>
+			<td><a href="#" [routerLink]="['/person/edit', person.id]">
+				Edit </a></td>
+	</table>
+</section>
